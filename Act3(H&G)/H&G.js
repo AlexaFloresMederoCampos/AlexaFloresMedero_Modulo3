@@ -33,40 +33,39 @@ function inicio()
     {
        console.log("casa bruja");
        window.location = "./casaBruja.html";
+       i++;
     }
     else if(res2 == "izquierda")
     {
       console.log("hongo");
       window.location = "./hongo.html";
+      i++;
     }
-    else
-    {
-      location.reload();
-    } 
+    i++;
     document.cookie = 'cookie2='+res2+';expires='+fecha.toGMTString();
-    }
+  }
+
     // primer camino
     else if(res == "izquierda")
     {
       let res2 = prompt('Escribe "derecha" o "izquierda" según el camino que decidas tomar');
-      //segundocamino
+      //segundo camino
       if(res2 == "derecha")
       {
         console.log("arbol");
         window.location = "./arbol.html";
+        i++;
       }
       else if(res2 == "izquierda")
       {
         console.log("casa");
         window.location = "./casa.html";
+        i++;
       }
-      else
-      {
-        location.reload();
-      } 
+      i++;
       document.cookie = 'cookie2='+res2+';expires='+fecha.toGMTString();     
     }
-    else
+    else if(i==0)
     {
       location.reload();
     } 
