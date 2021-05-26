@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+#titulo{
+	font-size: 3em;
+	font-family: 'Pattaya', sans-serif;
+	width: 100%;
+	text-align: center;
+}
+
+#galeria {
+    margin: 1rem auto;
+    width:100%;
+    max-width:960px;
+    padding:20px 20px;
+    box-sizing: border-box;
+    column-count: 3;
+
+    /* Espacio entre columnas */
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+}
+
+#galeria .Titulo {
+    -webkit-column-span:all;
+    column-span:all;
+}
+
+#galeria .enlace_card {
+    background:#fff;
+    border-radius:5px;
+    border:1px solid #ccc;
+    margin:0 0 20px 0;
+    text-align: center;
+    max-width: 100%;
+    filter: opacity(85%);
+    /*Evitamos que se corte al cambiar de columna*/
+    break-inside: avoid;
+    page-break-inside: avoid;
+
+}
+
+#galeria .enlace_card img {
+    width:100%;
+}
+
+#galeria .enlace_card:hover {
+    transition: .5s ease;
+    filter: opacity(100%);
+}
+
+#galeria figure {
+    padding:0.5em;
+    box-sizing: border-box;
+    font-family: 'SourceSansPro-SemiBold';
+    font-size: 1em;
+    color: var(--azulPrepa);
+    text-align: center;
+    margin: 0.3em 0;
+}
+
+
+/* Móviles en horizontal o tablets en vertical */
+@media (max-width: 767px) {
+    #galeria {
+        columns:2;
+    }
+
+}
+
+/* Móviles en vertical */
+
+@media (max-width: 480px) {
+    #galeria {
+        columns: 1;
+    }
+}
