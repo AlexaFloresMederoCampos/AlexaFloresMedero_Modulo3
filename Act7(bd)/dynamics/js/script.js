@@ -29,4 +29,19 @@ $(document).ready(function() {
             alert("Falle");
         });
     });
+    let peticion = $.ajax(
+    {
+        url:"./dynamics/php/Consultas.php",
+        data: 0,
+        method: "POST"
+    })
+    peticion.done(function(resp)
+    {
+        $(".results").html(resp);
+    })
+    peticion.fail(function(resp)
+    {
+        alert("Falle");
+    });
+
 });
